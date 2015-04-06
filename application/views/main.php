@@ -1,13 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Superbike Service System</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
-<!--slider-->
-
+<?php $this->load->view('head_css_js');?>
 </head>
 <body>
 <div class="header-bg">
@@ -40,7 +34,9 @@
 </div>
 <div class="wrap">
 <div class="content">
+<?php $this->load->view('data_messages');?>
 		<div class="section group">
+
 				<div class="grid_1_of_4 images_1_of_4">
 					<h3>Welcome</h3>
 		            <a href="details.html"><img src="<?php echo base_url();?>assets/images/pic1.jpg" alt="" /></a>

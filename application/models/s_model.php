@@ -276,7 +276,23 @@ class S_model extends CI_Model {
 		else if($messageType == "reset_pass")
         {
              $this->session->set_flashdata('email', 'Your new password is abc123.');
-        }       
+        }
+        else if($messageType == "login_error")
+        {
+             $this->session->set_flashdata('login_error', 'Incorrect Password or Username. Please try again.');
+        } 
+        else if($messageType == "logout")
+        {
+             $this->session->set_flashdata('logout', 'Successfull Logout, Please come back again next time.');
+        } 
+        else if($messageType == "login_match")
+        {
+             $this->session->set_flashdata('login_match', 'Password not match, try again.');
+        }
+        else if($messageType == "login")
+        {
+             $this->session->set_flashdata('login', 'Now, you can login using those information entered before.');
+        }         
         if($urlToGo == false){
              $url = current_url();
         }

@@ -29,7 +29,7 @@
 			<h3>Follow Us</h3>
 			<div class="social-icons">
 	   		  	<ul>
-			      <li class="facebook"><a href="#" target="_blank"> </a></li>
+			      <li class="facebook"><a href="https://www.facebook.com/mohdfauzan.zain" target="_blank"> </a></li>
 			      <li class="twitter"><a href="#" target="_blank"> </a></li>
 			      <li class="googleplus"><a href="#" target="_blank"> </a></li>
 			      <li class="contact"><a href="#" target="_blank"> </a></li>
@@ -48,5 +48,6 @@
 	</div>
 </div>
 </div>
-<script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.nivo.slider.js"></script>
