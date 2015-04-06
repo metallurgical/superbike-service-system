@@ -1,6 +1,6 @@
 <?php
 
-class Seat_model extends CI_Model {
+class S_model extends CI_Model {
 
     function __construct()
     {
