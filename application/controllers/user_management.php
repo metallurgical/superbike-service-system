@@ -88,6 +88,46 @@ class User_management extends CI_Controller {
 		$this->s_model->display_message($message, $urlToGo);
 
 	}
+
+	public function auth_login(){
+
+		$this->load->view('login_admin');
+		if($this->input->post('submit'))
+		{
+			$formData = $this->input->post();
+			
+			$table = "service_center";
+			$where = array(
+					  'service_center_username' => $formData['username'],
+					  'service_center_password' => $formData['password']
+					  );
+			$info = $this->s_model->get_specified_row($table, $where);
+			//print_r($info);
+			if(!empty($info))
+			{
+				//if($info['user_category']=="admin")
+				//{
+					$sessionData = array(
+								'user_id'  => $info['user_id'],
+								'category' => 'admin',
+								'username' => $info['service_center_username']
+								);			
+				
+					$this->session->set_userdata($sessionData);
+					redirect('service_management');
+				//}
+				
+				
+				
+			}
+			else
+			{
+				$message = "login_error";
+				$urlToGo = 'user_management/auth_login';
+				$this->s_model->display_message($message, $urlToGo);
+			}
+		}
+	}
 }
 
 /* End of file welcome.php */
